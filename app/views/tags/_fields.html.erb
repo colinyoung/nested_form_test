@@ -1,0 +1,10 @@
+<%= parent.fields_for :tags do |f| %>
+  <div class="tag">
+    <div>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+  </div>
+<%- end %>
+
+<p><%= parent.link_to_add 'Add a tag', :tags %></p>

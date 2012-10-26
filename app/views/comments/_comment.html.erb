@@ -1,0 +1,14 @@
+<div class="comment">
+  <p>
+    <%= comment.body %><br />
+    &mdash; <strong><%= comment.author %></strong>
+  </p>
+  <p>
+    <%- comment.tags.each do |tag| %>
+      <%= render tag %>
+    <%- end %>
+  </p>
+  <p class="right">
+    <%= link_to 'delete', post_comment_path(comment.post, comment), method: :delete %>
+  </p>
+</div>

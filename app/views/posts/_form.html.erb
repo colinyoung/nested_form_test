@@ -8,7 +8,13 @@
   
   <div>
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, rows: 10 %>
+  </div>
+  
+  <h4>Comments</h4>
+  
+  <div>
+    <%= render 'comments/fields', parent: f %>
   </div>
   
   <div>

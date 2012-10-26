@@ -3,6 +3,12 @@
   <%= post.body %>
 </p>
 
+<div class="comments">
+  <%- post.comments.each do |comment| %>
+    <%= render comment %>
+  <%- end %>
+</div>
+
 <ul class="horizontal">
   <li><%= link_to 'Edit', edit_post_path(post) %></li>
   <li><%= link_to 'Delete', post, method: :delete %></li>

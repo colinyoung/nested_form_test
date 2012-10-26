@@ -1,0 +1,21 @@
+<%= parent.fields_for :comments do |c| %>
+  <div class="comment">
+    <div>
+      <%= c.label :body %><br />
+      <%= c.text_area :body, rows: 3 %>
+    </div>
+
+    <div>
+      <%= c.label :author %><br />
+      <%= c.text_field :author %>
+    </div>
+    
+    <h4>Tags</h4>
+    
+    <div class="tags">
+      <%= render 'tags/fields', parent: c %>
+    </div>
+  </div>
+<%- end %>
+
+<p><%= parent.link_to_add 'Add a comment', :comments %></p>

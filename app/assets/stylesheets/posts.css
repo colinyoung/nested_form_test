@@ -36,3 +36,34 @@ ul.horizontal li {
   display: inline;
   margin-right: .25em
 }
+.comment {
+  border: 1px solid #666;
+  padding: 1em;
+  margin: 1ex 0;
+  font-size: 9pt;
+  width: 30em;
+}
+.comment p {
+  margin: 0;
+}
+
+.right {
+  text-align: right;
+}
+
+.tag {
+  margin: 1ex 0;
+}
+
+.tag-name {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px;
+  line-height: 30px;
+}
+
+.tags {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1ex 0;
+}
