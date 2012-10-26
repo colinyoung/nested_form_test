@@ -1,3 +1,11 @@
 <h2><%= post.title %></h2>
+<p class="body">
+  <%= post.body %>
+</p>
 
-<p><%= link_to 'destroy this post', post, method: :delete %></p>
+<ul class="horizontal">
+  <li><%= link_to 'Edit', edit_post_path(post) %></li>
+  <li><%= link_to 'Delete', post, method: :delete %></li>
+</ul>
+
+<hr />

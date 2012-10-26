@@ -4,8 +4,10 @@
   <ul>
   <%- flash.each do |key, value| %>
     <%- if value.is_a?(ActiveModel::Errors) %>
-      <%- value.messages.each do |field, error| %>
-        <li><%= field.capitalize %> <%= error.join(', ') %>.</li>
+      <%- value.messages.each do |field, errors| %>
+        <%- unless errors.empty? %>
+          <li><%= field.capitalize %> <%= errors.join(', ') %>.</li>
+        <%- end %>
       <%- end %>
     <%- else %>
       <li><%= value %></li>
