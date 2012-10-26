@@ -1,0 +1,15 @@
+<%- return unless flash.keys.count > 0 %>
+
+<div class="flash">
+  <ul>
+  <%- flash.each do |key, value| %>
+    <%- if value.is_a?(ActiveModel::Errors) %>
+      <%- value.messages.each do |field, error| %>
+        <li><%= field.capitalize %> <%= error.join(', ') %>.</li>
+      <%- end %>
+    <%- else %>
+      <li><%= value %></li>
+    <%- end %>
+  <%- end %>
+  </ul>
+</div>

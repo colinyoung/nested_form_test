@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+
+<%- unless @posts.empty? %>
+  <%- @posts.each do |p| %>
+    <%= render p %>
+  <%- end %>
+<%- end %>
+
+<p><%= link_to 'Create a new post', new_post_path %></p>
